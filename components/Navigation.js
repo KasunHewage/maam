@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-const Navigation = () => {
+const Navigation = (url) => {
+  const router = useRouter();
+
+  if (url.url === "products") console.log(`url is ${url.url}`);
+
   return (
     <div className="flex py-[20px]">
       <div className="w-[70%] lg:w-[30%] flex items-center   justify-start">
@@ -16,9 +21,44 @@ const Navigation = () => {
       </div>
       <div className="w-[30%] lg:w-[70%] flex items-center justify-end">
         <div className="gap-x-[50px] text-[20px] text-[#F75568] items-center hidden lg:flex">
-          <p className="cursor-pointer">Home</p>
-          <p className="cursor-pointer">About</p>
-          <p className="cursor-pointer">Our Products</p>
+          <p
+            className={`cursor-pointer ${
+              url.url === null ? "text-white" : "text-[#F75568]"
+            }`}
+            onClick={() => router.push("/")}
+          >
+            Home
+          </p>
+          <p
+            className={`cursor-pointer ${
+              url.url === "about" ? "text-white" : "text-[#F75568]"
+            }`}
+            onClick={() =>
+              router.push({
+                pathname: "/about",
+                query: {
+                  path: "about",
+                },
+              })
+            }
+          >
+            About
+          </p>
+          <p
+            className={`cursor-pointer ${
+              url.url === "products" ? "text-white" : "text-[#F75568]"
+            }`}
+            onClick={() =>
+              router.push({
+                pathname: "/products",
+                query: {
+                  path: "products",
+                },
+              })
+            }
+          >
+            Our Products
+          </p>
           <p className=" flex flex-col items-center text-sm cursor-pointer">
             <svg
               width="31"

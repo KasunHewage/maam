@@ -1,8 +1,12 @@
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = (url) => {
   return (
-    <div className=" text-white py-[50px] bg-[#28056B] px-[10px] sm:px-[50px] lg:px-[150px]">
+    <div
+      className={` text-white py-[50px] ${
+        url.url === "about" ? "bg-[#741660]" : "bg-[#28056B]"
+      } `}
+    >
       <div className=" grid grid-cols-1 md:grid-cols-2 ">
         <div className="flex flex-col items-center">
           <div className="relative w-[100px] h-[50px]">
