@@ -18,7 +18,7 @@ const About = () => {
           Company Profile
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 pb-[50px]">
-          <div className="pr-[30px]">
+          <div className="pr-0 md:pr-[30px]">
             <p className="text-center text-white text-[14px]">
               The Orient Lanka Confectionery (Pvt) Ltd was established in the
               year 2000 for the purpose of manufacturing high quality Biscuits &
@@ -78,7 +78,7 @@ const About = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 pb-[50px]">
           <div className="bg-white"></div>
-          <div className="pl-[30px]">
+          <div className="pr-0 md:pl-[30px]">
             <p className="text-center text-white text-[14px]">
               From a humble homemade tiny candy manufacturing facility with five
               employees and almost no machinery MAAM has come a long way in just
