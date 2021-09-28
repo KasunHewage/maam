@@ -53,7 +53,7 @@ const Footer = (url) => {
           <p>Hotline : +94-772 249 904</p>
         </div>
       </div>
-      <p className="text-center mt-8">©2021 Maam Biscuite Lanka (PVT) Ltd.</p>
+      <p className="text-center mt-8">©2021 Maam Biscuits Lanka (PVT) Ltd.</p>
     </div>
   );
 };
