@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 const Contact = () => {
   return (
-    <div className="py-[50px] grid grid-cols-1 md:grid-cols-2">
+    <div className="py-[50px] grid grid-cols-1 lg:grid-cols-2">
       <div className="px-[20px]">
         <input
           type="text"
@@ -30,7 +32,11 @@ const Contact = () => {
           Submit
         </button>
       </div>
-      <div className="bg-white "></div>
+      <div className="hidden lg:flex justify-end">
+        <div className="relative w-[75%] h-[500px]">
+          <Image src="https://res.cloudinary.com/slktech/image/upload/v1633018060/Maam/2-01_qzddbv.png" layout="fill" />
+        </div>
+      </div>
     </div>
   );
 };

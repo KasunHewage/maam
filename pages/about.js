@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
@@ -6,8 +7,6 @@ const About = () => {
   const router = useRouter();
 
   const url = router.query;
-
-
 
   return (
     <div className="bg-[#28056B]">
@@ -17,7 +16,7 @@ const About = () => {
         <h1 className="text-[#F75568] pt-[70px] pb-[30px] text-center text-[30px]">
           Company Profile
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 pb-[50px]">
+        <div className="pb-[50px]">
           <div className="pr-0 md:pr-[30px]">
             <p className="text-center text-white text-[14px]">
               The Orient Lanka Confectionery (Pvt) Ltd was established in the
@@ -70,14 +69,20 @@ const About = () => {
               distribution network.
             </p>
           </div>
-          <div className="bg-white"></div>
+          <div className="flex justify-center">
+            <div className=" relative w-[55%] h-[300px] mt-[50px]">
+              <Image
+                src="https://res.cloudinary.com/slktech/image/upload/v1633018057/Maam/2-03_ihnfhx.png"
+                layout="fill"
+              />
+            </div>
+          </div>
         </div>
 
         <h1 className="text-[#F75568] pt-[70px] pb-[30px] text-center text-[30px]">
           History of Maam
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 pb-[50px]">
-          <div className="bg-white"></div>
+        <div className="pb-[50px]">
           <div className="pr-0 md:pl-[30px]">
             <p className="text-center text-white text-[14px]">
               From a humble homemade tiny candy manufacturing facility with five
